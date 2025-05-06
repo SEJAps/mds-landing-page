@@ -1,11 +1,40 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import logo from "../assets/logo-mds.svg";
+import title from "../assets/title.svg";
+import fondo from "../assets/fondo.png";
+import first_image from "../assets/first_image.png";
 ---
 
 <Layout>
-	<Welcome />
+  <article
+    style={{
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: "1rem",
+      marginTop: "2rem",
+    }}
+  >
+    <img alt="" src={logo.src} />
+    <img alt="" src={title.src} />
+  </article>
+  <article>
+    <span>DATOS EN TIEMPO REAL, ESTADÍSTICAS DE PARTIDOS</span>
+    <h1>Cuando la diferencia está en los detalles... seamos la diferencia</h1>
+    <p>
+      Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+      Velit officia consequat duis enim velit mollit. Exercitation veniam
+      consequat sunt nostrud amet.
+    </p>
+    <footer>
+      <button>Únete a nosotros</button>
+      <button>Contact Sales</button>
+    </footer>
+  </article>
+  <article>
+    <img alt="" src={fondo.src} />
+    <img alt="" src={first_image.src} />
+  </article>
 </Layout>
