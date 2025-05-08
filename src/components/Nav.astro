@@ -8,6 +8,10 @@ import {
 ---
 
 <nav>
+  <aside>
+    <a href="/">Home</a>
+    <a href="/dashboard">Dashboard</a>
+  </aside>
   <SignedOut>
     <SignInButton mode="modal" />
   </SignedOut>
@@ -18,8 +22,11 @@ import {
 
 <style>
   nav {
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: flex-end;
     padding: 1rem;
+    background: rgb(255, 129, 3);
   }
 </style>
