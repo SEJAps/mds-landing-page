@@ -13,7 +13,7 @@ import { clerkMiddleware, createRouteMatcher } from "@clerk/astro/server";
 //   // Continue to the next middleware or route handler
 //   return next();
 // });
-const isProptectedRoute = createRouteMatcher(["/"]);
+const isProptectedRoute = createRouteMatcher(["/dashboard"]);
 export const onRequest = clerkMiddleware((auth, context) => {
   const { userId, redirectToSignIn } = auth();
   if (isProptectedRoute(context.request) && !userId) {

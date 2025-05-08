@@ -8,7 +8,7 @@ import {
 ---
 
 <nav>
-  <aside>
+  <aside class="flex bg-red-600">
     <a href="/">Home</a>
     <a href="/dashboard">Dashboard</a>
   </aside>
@@ -27,6 +27,11 @@ import {
     display: flex;
     justify-content: flex-end;
     padding: 1rem;
-    background: rgb(255, 129, 3);
+  }
+  aside {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 0 1rem;
   }
 </style>
