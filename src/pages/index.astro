@@ -4,38 +4,83 @@ import logo from "../assets/logo-mds.svg";
 import name_bussines from "../assets/title.svg";
 import fondo from "../assets/fondo.png";
 import first_image from "../assets/first_image.png";
+import second_image from "../assets/second_image.png";
 import { mook } from "../config.ts";
+import BtnScroll from "../components/BtnScroll.astro";
 ---
 
 <Layout>
-  <article
-    style={{
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
-      gap: "1rem",
-      marginTop: "2rem",
-    }}
+  <section
+    class="flex flex-col gap-1 md:gap-12 md:flex-row md:h-dvh items-center overflow-x-hidden"
   >
-    <img alt="" src={logo.src} />
-    <img alt="" src={name_bussines.src} />
-  </article>
-  <article>
-    <span class="text-blue-300 font-black p-4">{mook.title}</span>
-    <h1>Cuando la diferencia está en los detalles... seamos la diferencia</h1>
-    <p>
-      Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-      Velit officia consequat duis enim velit mollit. Exercitation veniam
-      consequat sunt nostrud amet.
-    </p>
-    <footer>
-      <button>Únete a nosotros</button>
-      <button>Contact Sales</button>
-    </footer>
-  </article>
-  <article>
-    <img alt="" src={fondo.src} />
-    <img alt="" src={first_image.src} />
-  </article>
+    <section class="flex-1">
+      <article class="flex flex-col items-center justify-center gap-2 py-6">
+        <img alt="" src={logo.src} />
+        <img alt="" src={name_bussines.src} />
+        <p class="text-blue-300 font-black px-4 text-lg">{mook.title}</p>
+      </article>
+      <article>
+        <header>
+          <h1 class="text-white text-4xl font-black p-4">
+            Cuando la diferencia está en los detalles... seamos la diferencia
+          </h1>
+        </header>
+        <section>
+          <p class="font-black px-4">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis enim velit mollit. Exercitation
+            veniam consequat sunt nostrud amet.
+          </p>
+        </section>
+        <footer class="flex gap-4 items-center justify-center py-4 z-99">
+          <button
+            type="button"
+            class="py-2 px-4 border-2 border-2-white rounded-2xl bg-white text-black font-black"
+            >Únete a nosotros</button
+          >
+          <button
+            type="button"
+            class="py-2 px-4 border-2 border-2-white rounded-2xl text-white bg-black font-black"
+            >Contact Sales</button
+          >
+        </footer>
+      </article>
+    </section>
+    <section class="flex-1 flex items-center justify-center">
+      <article class="flex flex-col items-center justify-center">
+        <img
+          alt="Primera imagen"
+          src={first_image.src}
+          class="-translate-y-4 md:translate-y-4 md:hidden z-100"
+        />
+        <img
+          alt="Primera imagen"
+          src={second_image.src}
+          class="hidden md:block max-w-[620px] max-h-[310px] md:absolute z-100"
+        />
+        <img
+          alt="Primera imagen"
+          src={fondo.src}
+          class="absolute z-99 md:max-w-[512px] lg:max-w-[680px] xl:max-w-[840px]"
+        />
+      </article>
+    </section>
+  </section>
+  <section
+    class="flex flex-col md:flex-row gap-2 items-center justify-center relative min-h-96"
+  >
+    <article class="md:absolute md:-top-40 z-10 w-26 h-26">
+      <BtnScroll />
+    </article>
+    <article class="flex-1 flex flex-col items-center justify-center">
+      <h1 class="text-white text-4xl font-black p-4 text-center">
+        Conoce nuestros servicios
+      </h1>
+      <p class="font-black px-4 text-center">
+        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+        sint. Velit officia consequat duis enim velit mollit. Exercitation
+        veniam consequat sunt nostrud amet.
+      </p>
+    </article>
+  </section>
 </Layout>
