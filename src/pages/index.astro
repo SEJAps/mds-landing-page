@@ -2,11 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import logo from "../assets/logo-mds.svg";
 import name_bussines from "../assets/title.svg";
-import fondo from "../assets/fondo.png";
-import first_image from "../assets/first_image.png";
-import second_image from "../assets/second_image.png";
-import { mook } from "../config.ts";
 import BtnScroll from "../components/BtnScroll.astro";
+import { mook } from "../config.ts";
 ---
 
 <Layout>
@@ -22,27 +19,27 @@ import BtnScroll from "../components/BtnScroll.astro";
       <article>
         <header>
           <h1 class="text-white text-4xl font-black p-4">
-            Cuando la diferencia está en los detalles... seamos la diferencia
+            {mook.subtitle}
           </h1>
         </header>
         <section>
           <p class="font-black px-4">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit. Exercitation
-            veniam consequat sunt nostrud amet.
+            {mook.description}
           </p>
         </section>
         <footer class="flex gap-4 items-center justify-center py-4 z-99">
           <button
             type="button"
             class="py-2 px-4 border-2 border-2-white rounded-2xl bg-white text-black font-black"
-            >Únete a nosotros</button
           >
+            {mook.buttons.primary}
+          </button>
           <button
             type="button"
             class="py-2 px-4 border-2 border-2-white rounded-2xl text-white bg-black font-black"
-            >Contact Sales</button
           >
+            {mook.buttons.secondary}
+          </button>
         </footer>
       </article>
     </section>
@@ -50,17 +47,17 @@ import BtnScroll from "../components/BtnScroll.astro";
       <article class="flex flex-col items-center justify-center">
         <img
           alt="Primera imagen"
-          src={first_image.src}
+          src={mook.images.first_image}
           class="-translate-y-4 md:translate-y-4 md:hidden z-100"
         />
         <img
           alt="Primera imagen"
-          src={second_image.src}
+          src={mook.images.second_image}
           class="hidden md:block max-w-[620px] max-h-[310px] md:absolute z-100"
         />
         <img
           alt="Primera imagen"
-          src={fondo.src}
+          src={mook.images.fondo}
           class="absolute z-99 md:max-w-[512px] lg:max-w-[680px] xl:max-w-[840px]"
         />
       </article>

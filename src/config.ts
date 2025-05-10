@@ -3,7 +3,7 @@ import logo from "./assets/logo-mds.svg";
 import name_bussines from "./assets/title.svg";
 import fondo from "./assets/fondo.png";
 import first_image from "./assets/first_image.png";
-
+import second_image from "./assets/second_image.png";
 
 const mook = {
   title: "DATOS EN TIEMPO REAL, ESTADÍSTICAS DE PARTIDOS",
@@ -18,6 +18,7 @@ const mook = {
     logo: logo.src,
     name_bussines: name_bussines.src,
     first_image: first_image.src,
+    second_image: second_image.src,
   }
 }
 

@@ -1,0 +1,68 @@
+---
+import Logo from "../components/Logo.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <section class="bg-white h-dvh flex flex-col gap-8">
+    <header class="flex-1 flex items-center justify-center p-4">
+      <Logo variant="default" />
+    </header>
+
+    <form class="flex-1 flex flex-col gap-4 p-4">
+      <section>
+        <label for="email">
+          <input
+            id="email"
+            type="email"
+            placeholder="E-mail"
+            class="border-2 border-gray-300 rounded-lg p-2 w-full"
+            required
+            title="Your Email"
+            aria-label="Your Email"
+            aria-required="true"
+          />
+        </label>
+      </section>
+      <section>
+        <label for="password">
+          <input
+            id="password"
+            type="password"
+            placeholder="Your password"
+            class="border-2 border-gray-300 rounded-lg p-2 w-full"
+            required
+            title="Your password"
+            aria-label="Your password"
+            aria-required="true"
+          />
+        </label>
+      </section>
+      <footer class="flex-1 flex w-full">
+        <button
+          class="w-full bg-black text-white px-4 py-2 rounded-2xl font-extralight"
+          >Continue</button
+        >
+      </footer>
+    </form>
+
+    <footer class="flex-1 flex flex-col justify-between p-4">
+      <section class="flex justify-between p-4 items-center">
+        <span>
+          <a href="/forgot-password"> Forgot your password? </a>
+        </span>
+        <span class="inline-flex flex-col">
+          <a
+            href="/register"
+            title="Don't have an account?"
+            class="text-blue-300"
+            >Sign up
+          </a>
+        </span>
+      </section>
+      <address class="text-center text-sm p-4">
+        copyright &copy; {new Date().getFullYear()} MDS.
+      </address>
+    </footer>
+  </section>
+</Layout>
