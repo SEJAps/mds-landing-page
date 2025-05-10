@@ -1,23 +1,8 @@
----
-import {
-  SignedIn,
-  SignedOut,
-  UserButton,
-  SignInButton,
-} from "@clerk/astro/components";
----
-
 <nav>
   <aside class="flex bg-red-600">
     <a href="/">Home</a>
     <a href="/dashboard">Dashboard</a>
   </aside>
-  <SignedOut>
-    <SignInButton mode="modal" />
-  </SignedOut>
-  <SignedIn>
-    <UserButton />
-  </SignedIn>
 </nav>
 
 <style>
