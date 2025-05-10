@@ -1,19 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import logo from "../assets/logo-mds.svg";
-import name_bussines from "../assets/title.svg";
 import BtnScroll from "../components/BtnScroll.astro";
 import { mook } from "../config.ts";
+import Logo from "../components/Logo.astro";
+import Services from "../components/Services.astro";
 ---
 
 <Layout>
   <section
-    class="flex flex-col gap-1 md:gap-12 md:flex-row md:h-dvh items-center overflow-x-hidden"
+    class="flex flex-col gap-8 md:gap-12 md:flex-row md:h-dvh items-center overflow-x-hidden"
   >
     <section class="flex-1">
-      <article class="flex flex-col items-center justify-center gap-2 py-6">
-        <img alt="" src={logo.src} />
-        <img alt="" src={name_bussines.src} />
+      <article class="flex flex-col items-center justify-center gap-4 py-10">
+        <Logo />
         <p class="text-blue-300 font-black px-4 text-lg">{mook.title}</p>
       </article>
       <article>
@@ -55,7 +54,7 @@ import { mook } from "../config.ts";
         <img
           alt="Primera imagen"
           src={mook.images.second_image}
-          class="hidden md:block max-w-[620px] max-h-[310px] md:absolute z-99"
+          class="hidden md:block max-w-[620px] max-h-[310px] md:absolute z-100"
         />
         <img
           alt="Primera imagen"
@@ -65,21 +64,5 @@ import { mook } from "../config.ts";
       </article>
     </section>
   </section>
-  <section
-    class="flex flex-col md:flex-row gap-2 items-center justify-center relative min-h-96"
-  >
-    <article class="md:absolute md:-top-40 z-10 w-26 h-26">
-      <BtnScroll />
-    </article>
-    <article class="flex-1 flex flex-col items-center justify-center">
-      <h1 class="text-white text-4xl font-black p-4 text-center">
-        Conoce nuestros servicios
-      </h1>
-      <p class="font-black px-4 text-center">
-        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-        sint. Velit officia consequat duis enim velit mollit. Exercitation
-        veniam consequat sunt nostrud amet.
-      </p>
-    </article>
-  </section>
+  <Services />
 </Layout>
