@@ -4,7 +4,7 @@ import { Link } from "react-router";
 
 const SignInPage: React.FC = () => {
   return (
-    <section className="bg-white grid py-8 h-dvh">
+    <section className="bg-white grid md:py-8 h-svh">
       <article className="flex items-center justify-center py-4">
         <span className="inline-flex flex-col items-center justify-center gap-4 p-4 rounded-lg">
           <Logo />
@@ -55,11 +55,11 @@ const SignInPage: React.FC = () => {
             Forgot your password?
           </Link>
           <Link to="/account/create-account" className="text-black text-center">
-            Create new acoount?
+            Create new account?
           </Link>
           </article>
-          <address className="w-full text-black flex items-end justify-center p-4">
-            <p className="text-gray-500 text-center text-xl">Copyright &copy; {new Date().getFullYear()} 
+          <address className="w-full text-black flex items-end justify-center">
+            <p className="text-gray-500 text-center text-xl  py-2">Copyright &copy; {new Date().getFullYear()} 
               <i className="text-2xl">{" "}<span className="text-[#32712F]">M</span><span className="text-[#CE302F]">D</span><span className="text-black">S</span></i>
               </p>
           </address>
