@@ -1,8 +1,9 @@
-import CompanyName from "./assets/icons/CompanyName";
-import Logo from "./assets/icons/Logo";
-import ScrollDown from "./assets/icons/ScrollDown";
-import fondo from "./assets/png/background.png";
-import tabletAndMobile from "./assets/png/img_1.png";
+import { Link } from "react-router";
+import CompanyName from "../assets/icons/CompanyName";
+import Logo from "../assets/icons/Logo";
+import ScrollDown from "../assets/icons/ScrollDown";
+import fondo from "../assets/png/background.png";
+import tabletAndMobile from "../assets/png/img_1.png";
 const App: React.FC = () => {
   return (
     <section className="flex flex-col md:flex-row md:flex-wrap py-8">
@@ -12,7 +13,7 @@ const App: React.FC = () => {
           <CompanyName />
         </span>
         <h2 className="text-3xl p-4 text-[#8DF0F6] uppercase font-black">
-          Datos en teimpo real, estadísticas de partidos.
+          Datos en tiempo real, estadísticas de partidos.
         </h2>
         <p className="text-4xl p-4 font-black">
           Cuando la diferencia está en los detalles... seamos la diferencia
@@ -23,12 +24,12 @@ const App: React.FC = () => {
           veniam consequat sunt nostrud amet.
         </p>
         <footer className="flex justify-center gap-4 p-4">
-          <button className="rounded-full bg-white text-black px-4 py-2 border-2 border-black font-black">
+          <Link to="/account/signin" className="rounded-full bg-white text-black px-4 py-2 border-2 border-black font-black">
             Únete a nosotros
-          </button>
-          <button className="rounded-full bg-black text-white px-4 py-2 border-2 border-white font-black">
-            Contact saless
-          </button>
+          </Link>
+          <Link to="/" className="rounded-full bg-black text-white px-4 py-2 border-2 border-white font-black">
+            Contact sales
+          </Link>
         </footer>
       </article>
       <article className="w-full max-w-7xl mx-auto flex-1 flex items-center justify-center min-h-96 relative">
