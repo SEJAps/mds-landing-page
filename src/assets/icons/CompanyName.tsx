@@ -14,7 +14,7 @@ const CompanyName: React.FC<Props> = ({ variant = "dark" }) => {
   };
 
   return (
-    <h1 className="aspect-auto max-w-56">
+    <h1 className="aspect-auto max-w-46">
       <svg
         width="100%"
         height="100%"

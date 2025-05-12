@@ -22,7 +22,7 @@ const Logo: React.FC<Props> = ({ variant = "light" }) => {
   };
 
   return (
-    <i className="aspect-auto max-w-44">
+    <i className="aspect-auto max-w-32">
       <svg
         width="100%"
         height="100%"

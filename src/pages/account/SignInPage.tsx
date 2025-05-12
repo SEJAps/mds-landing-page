@@ -42,7 +42,7 @@ const SignInPage: React.FC = () => {
               type="submit"
               className="w-full py-2 px-4 bg-black text-white font-black rounded-2xl border-2 border-amber-950"
             >
-              Sign In
+              Continue
             </button>
           </footer>
         </form>
