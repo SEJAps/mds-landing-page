@@ -6,8 +6,8 @@ import fondo from "../assets/png/background.png";
 import tabletAndMobile from "../assets/png/img_1.png";
 const App: React.FC = () => {
   return (
-    <section className="flex flex-col md:flex-row md:flex-wrap py-8">
-      <article className="flex-1 flex flex-col items-center md:px-16">
+    <section className="flex flex-col xl:flex-row xl:flex-wrap pt-8">
+      <article className="flex-1 flex flex-col items-center justify-center xl:px-16">
         <span className="inline-flex flex-col items-center justify-center gap-4 p-4 rounded-lg">
           <Logo />
           <CompanyName />
@@ -32,25 +32,25 @@ const App: React.FC = () => {
           </Link>
         </footer>
       </article>
-      <article className="w-full max-w-7xl mx-auto flex-1 flex items-center justify-center min-h-96 relative">
+      <article className="w-full max-w-7xl mx-auto flex-1 flex items-center justify-center min-h-72 md:min-h-[1024px] relative">
         <img
           src={fondo}
           alt="Fondo circulos rojo"
           aria-label="Fondo circulos rojo"
-          className="absolute  object-cover z-1 left-0 top-0 w-full h-full"
+          className="absolute object-cover z-1 left-0 xl:-top-20 w-full h-full"
         />
         <img
           src={tabletAndMobile}
           alt="Imagen de tablet y móvil"
           aria-label="Imagen de tablet y móvil"
-          className="aspect-auto z-2 max-w-8/12 md:max-w-7/12"
+          className="aspect-auto z-2 max-w-8/12 xl:max-w-7/12 xl:-translate-y-20 xl:translate-x-10"
         />
       </article>
-      <article className="w-full mx-auto min-h-32 md:min-h-72 flex items-center justify-center pb-22">
+      <article className="w-full mx-auto min-h-32 flex items-center justify-center pb-22">
         <ScrollDown />
       </article>
       <article className="flex flex-1 bg-white relative py-28 md:py-48 px-4">
-        <section className="flex items-center justify-center p-4 absolute -top-22 md:-top-26 left-1/2 transform -translate-x-1/2">
+        <section className="flex items-center justify-center p-4 absolute -top-22 xl:-top-26 left-1/2 transform -translate-x-1/2">
           <span className="inline-flex flex-col items-center justify-center gap-4 p-4 rounded-lg">
             <Logo />
             <CompanyName />
