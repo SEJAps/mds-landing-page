@@ -1,41 +1,72 @@
 import CompanyName from "../../assets/icons/CompanyName";
 import Logo from "../../assets/icons/Logo";
-import { Link } from "react-router"
+import { Link } from "react-router";
 
 const SignInPage: React.FC = () => {
   return (
-    <section className="bg-white h-dvh">
+    <section className="bg-white grid py-8 h-dvh">
       <article className="flex items-center justify-center py-4">
         <span className="inline-flex flex-col items-center justify-center gap-4 p-4 rounded-lg">
           <Logo />
           <CompanyName />
         </span>
       </article>
-      <article className="h-56 p-4">
-        <form className="flex flex-col py-8 px-8 text-black gap-4 max-w-[480px] mx-auto bg-amber-100 rounded-4xl border-2 border-amber-950" >
-          <label className="inline-flex flex-col p-y2 px-4 gap-4" >
-            <span className="text-black">Inster your email</span>
-            <input className="py-2 px-4 border-2 border-amber-950 rounded-2xl" type="email" placeholder="Email" required />
+      <article className="p-4 flex flex-col gap-2">
+        <header className="flex flex-col gap-2">
+          <h2 className="text-black text-3xl font-black text-center">
+            Inicia sesión
+          </h2>
+          <p className="text-gray-500 text-xl text-center">
+            Introduce tu email y contraseña para acceder a tu cuenta.
+          </p>
+        </header>
+        <form className="flex flex-col py-8 text-black gap-4 w-full lg:max-w-[480px] lg:mx-auto">
+          <label className="inline-flex flex-col p-y2  gap-4">
+            <input
+              className="py-2 px-4 border-2 border-amber-950 rounded-2xl"
+              type="email"
+              placeholder="Email"
+              required
+            />
           </label>
-          <label className="inline-flex flex-col p-y2 px-4 gap-4" >
-            <span className="text-black">Insert your password</span>
-            <input className="py-2 px-4 border-2 border-amber-950 rounded-2xl" type="password" placeholder="Password" required />
+          <label className="inline-flex flex-col p-y2 gap-4">
+            <input
+              className="py-2 px-4 border-2 border-amber-950 rounded-2xl"
+              type="password"
+              placeholder="Password"
+              required
+            />
           </label>
-          <button type="submit" className="py-2 px-4 bg-amber-950 text-white rounded-2xl border-2 border-amber-950 font-black">
-            Sign In
-          </button>
+          <footer className="">
+            <button
+              type="submit"
+              className="w-full py-2 px-4 bg-black text-white font-black rounded-2xl border-2 border-amber-950"
+            >
+              Sign In
+            </button>
+          </footer>
         </form>
-        <footer className="flex justify-between gap-4 p-4 max-w-[480px] mx-auto">
-          <Link to="/account/forgot-password" className="text-black text-center">
+        <footer className="flex flex-wrap gap-2 max-w-[480px] mx-auto">
+          <article className="w-full flex flex-wrap gap-2 justify-between">
+            <Link
+            to="/account/forgot-password"
+            className="text-black text-center"
+          >
             Forgot your password?
           </Link>
           <Link to="/account/create-account" className="text-black text-center">
-            Create new acoount?</Link>
+            Create new acoount?
+          </Link>
+          </article>
+          <address className="w-full text-black flex items-end justify-center p-4">
+            <p className="text-gray-500 text-center text-xl">Copyright &copy; {new Date().getFullYear()} 
+              <i className="text-2xl">{" "}<span className="text-[#32712F]">M</span><span className="text-[#CE302F]">D</span><span className="text-black">S</span></i>
+              </p>
+          </address>
         </footer>
       </article>
     </section>
-  )
-}
-
+  );
+};
 
 export default SignInPage;

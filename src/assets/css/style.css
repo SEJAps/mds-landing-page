@@ -4,15 +4,6 @@
 *,*::before,*::after {
   box-sizing: border-box;
 }
-a {
-  font-weight: 500;
-  color: #252525;
-  text-decoration: none;
-}
-
-a:hover {
-  color: skyblue;
-}
 
 body {
   margin: 0;

@@ -27,7 +27,7 @@ const App: React.FC = () => {
           <Link to="/account/signin" className="rounded-full bg-white text-black px-4 py-2 border-2 border-black font-black">
             Únete a nosotros
           </Link>
-          <Link to="/" className="rounded-full bg-black text-white px-4 py-2 border-2 border-white font-black">
+          <Link to="/account/contact-sales" className="rounded-full bg-black text-white px-4 py-2 border-2 border-white font-black">
             Contact sales
           </Link>
         </footer>
