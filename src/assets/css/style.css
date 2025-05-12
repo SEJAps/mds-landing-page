@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@import url(./root.css);
+
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+a {
+  font-weight: 500;
+  color: #252525;
+  text-decoration: none;
+}
+
+a:hover {
+  color: skyblue;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  background: #252525;
+  color: snow;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  margin: 0;
+  padding: 0;
+}
+#root{
+  display: grid;
+  flex-direction: column;
+  width: inherit;
+  height: inherit;
+}
