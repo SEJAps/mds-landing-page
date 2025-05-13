@@ -2,6 +2,8 @@ import "./assets/css/style.css";
 import { lazy, StrictMode, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router";
+import Club from "./pages/account/create/Club.tsx";
+import Team from "./pages/account/create/Team.tsx";
 
 // Importing lazy-loaded components
 // These components will be loaded only when they are needed, improving the initial load time of the application.
@@ -31,6 +33,8 @@ app.render(
           <Route path="/" element={<App />} />
           <Route path="/account/signin" element={<SignInPage />} />
           <Route path="/account/contact-sales" element={<ContactSales />} />
+          <Route path="/account/create/club" element={<Club />} />
+          <Route path="/account/create/team" element={<Team />} />
           <Route path="/account/forgot-password" element={<ForgotPassword />} />
           <Route
             path="/account/create-account"
