@@ -2,7 +2,7 @@ import { Link } from "react-router";
 import CompanyName from "../../../../assets/icons/CompanyName";
 import Logo from "../../../../assets/icons/Logo";
 
-const Club: React.FC = () => {
+const FirstStepClub: React.FC = () => {
   return (
     <section className="bg-white py-8 flex flex-col gap-4 xl:gap-8">
       <article className="flex items-center justify-center py-2">
@@ -21,22 +21,22 @@ const Club: React.FC = () => {
           </p>
         </header>
         <form className="flex flex-col py-8 text-black gap-4 w-full lg:max-w-[480px] lg:mx-auto">
-          <label htmlFor="email" className="inline-flex flex-col p-y2  gap-4">
+          <label htmlFor="club" className="inline-flex flex-col p-y2  gap-4">
             <input
               className="py-2 px-4 border-2 border-amber-950 rounded-2xl"
-              type="email"
-              placeholder="Email"
-              id="email"
+              type="text"
+              placeholder="club"
+              id="club"
               autoComplete="on"
               required
             />
           </label>
-          <label htmlFor="username" className="inline-flex flex-col p-y2 gap-4">
+          <label htmlFor="team-name" className="inline-flex flex-col p-y2 gap-4">
             <input
               className="py-2 px-4 border-2 border-amber-950 rounded-2xl"
               type="text"
-              placeholder="Nombre de usuario"
-              id="username"
+              placeholder="Nombre de equipo"
+              id="team-name" 
               autoComplete="on"
               required
             />
@@ -106,4 +106,4 @@ const Club: React.FC = () => {
   );
 };
 
-export default Club;
+export default FirstStepClub;
