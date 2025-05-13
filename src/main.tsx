@@ -2,8 +2,6 @@ import "./assets/css/style.css";
 import { lazy, StrictMode, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router";
-import Club from "./pages/account/create/Club.tsx";
-import Team from "./pages/account/create/Team.tsx";
 
 
 // Importing lazy-loaded components
@@ -14,6 +12,8 @@ const SignInPage = lazy(() => import("./pages/account/SignInPage.tsx"));
 const ForgotPassword = lazy(() => import("./pages/account/ForgotPassword.tsx"));
 const ContactSales = lazy(() => import("./pages/ContactSales.tsx"));
 const PageNotFound = lazy(() => import("./layouts/PageNotFound.tsx"));
+const Club = lazy(() => import("./pages/account/create/club/Club.tsx"));
+const Team = lazy(() => import("./pages/account/create/team/Team.tsx"));
 
 // Creating the root element for the React application
 // This is where the React application will be rendered.
@@ -23,7 +23,7 @@ const app = createRoot(root);
 app.render(
   <Suspense
     fallback={
-      <div className="flex items-center justify-center h-svh bg-white">
+      <div className="flex items-center justify-center h-svh bg-white text-black text-4xl font-black">
         Loading...
       </div>
     }
