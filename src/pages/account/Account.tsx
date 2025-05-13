@@ -1,6 +1,8 @@
 import type React from "react";
 import Logo from "../../assets/icons/Logo";
 import CompanyName from "../../assets/icons/CompanyName";
+// import { Link } from "react-router";
+// import CheesRegister from "../../assets/icons/CheesRegister";
 import { Link } from "react-router";
 
 const Account: React.FC = () => {
@@ -12,6 +14,9 @@ const Account: React.FC = () => {
           <CompanyName />
         </span>
       </article>
+      {/* <article className="flex items-center justify-center">
+        <CheesRegister />
+      </article> */}
       <article className="bg-gradient-to-t from-[#141313] from-50%  to-[#df0a0a] to-50% w-full max-w-72 min-h-[24rem] mx-auto rounded-2xl flex justify-center items-center">
         <section className="bg-gradient-to-t from-[#df0a0a] from-50%  to-[#141313] to-50% rounded-full flex flex-col items-center justify-around w-48 h-48">
           <Link to="/account/create/club" className="font-black text-2xl text-shadow-gray-400 text-shadow-md">Club</Link>
