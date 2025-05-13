@@ -1,8 +1,9 @@
-import { Link } from "react-router";
-import CompanyName from "../../assets/icons/CompanyName";
+import type React from "react";
 import Logo from "../../assets/icons/Logo";
+import CompanyName from "../../assets/icons/CompanyName";
+import { Link } from "react-router";
 
-const CreateNewAccount: React.FC = () => {
+const Account: React.FC = () => {
   return (
     <section className="bg-white h-screen py-8 flex flex-col gap-4 xl:gap-8">
       <article className="flex items-center justify-center py-2">
@@ -27,5 +28,4 @@ const CreateNewAccount: React.FC = () => {
     </section>
   );
 };
-
-export default CreateNewAccount;
+export default Account;
